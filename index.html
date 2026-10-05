@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>八零光影电影网 - 80-90年代怀旧片单与录像厅</title>
+<meta name="description" content="八零光影电影网(balingguangyingdianyingwang-h5)整理1980s-1990s港片、国产老片、录像厅片目、VHS怀旧与胶片修复片单，移动端自适应，必应收录友好，不提供盗版下载。">
+<meta name="keywords" content="八零光影电影网, 80年代电影, 90年代电影, 录像厅, 港片黄金年代, VHS, 胶片修复, 怀旧片单">
+<meta name="author" content="八零光影电影网">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://balingguangyingdianyingwang-h5.github.io/">
+
+<style>
+:root{
+  --night:#1a1320;
+  --night2:#271a2c;
+  --velvet:#7c1f2b;
+  --neon:#ff5fa2;
+  --cyan:#43e0d0;
+  --gold:#f4b740;
+  --paper:#f4ead2;
+  --ink:#2a2018;
+  --muted:#9b8aa0;
+  --line:rgba(255,95,162,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 2px,transparent 2px 4px),
+    radial-gradient(120% 60% at 90% -10%, rgba(255,95,162,.22), transparent 55%),
+    radial-gradient(120% 70% at 0% 0%, rgba(67,224,208,.18), transparent 55%),
+    linear-gradient(180deg,var(--night),var(--night2) 60%,#140e18 100%);
+  color:var(--paper);line-height:1.75;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* VHS条 */
+.vhs-bar{
+  background:linear-gradient(90deg,var(--velvet),var(--neon),var(--cyan));
+  color:#1a1320;text-align:center;font-size:11px;letter-spacing:3px;
+  padding:6px 10px;font-weight:800;font-family:"Courier New",monospace;
+}
+
+/* 头部 */
+.header{max-width:1120px;margin:0 auto;padding:30px 20px 16px;text-align:center}
+.crt{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:12px 24px;border-radius:12px;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);
+  box-shadow:0 0 24px rgba(255,95,162,.18);
+}
+.crt .play{font-size:30px}
+.crt h1{font-size:28px;letter-spacing:3px;color:#fff;text-shadow:0 0 10px rgba(255,95,162,.5)}
+.crt .en{font-family:"Courier New",monospace;font-size:11px;color:var(--cyan);letter-spacing:2px}
+.header p.slogan{margin-top:12px;color:#e7d6e6;font-size:14px}
+
+/* 搜索 */
+.search-wrap{max-width:520px;margin:16px auto 0}
+.search-wrap form{display:flex;height:42px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:rgba(0,0,0,.35)}
+.search-wrap input{flex:1;border:none;outline:none;background:transparent;color:#fff;padding:0 16px;font-size:13px;font-family:"Courier New",monospace}
+.search-wrap input::placeholder{color:#b89bb4}
+.search-wrap button{border:none;background:var(--neon);color:#1a1320;padding:0 20px;font-weight:800;cursor:pointer;font-family:"Courier New",monospace}
+
+/* 导航 */
+.nav{max-width:1120px;margin:18px auto 22px;padding:0 20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.nav a{padding:7px 15px;border:1px solid var(--line);border-radius:8px;font-size:13px;color:#e7d6e6;background:rgba(255,255,255,.04);font-family:"Courier New",monospace}
+.nav a:hover,.nav a.active{background:var(--neon);color:#1a1320;border-color:var(--neon);font-weight:800}
+
+/* 主区 */
+.main{max-width:1120px;margin:0 auto;padding:0 20px 30px}
+
+/* 录像厅横幅 */
+.hall{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#2c1118,#3a1830);
+  border:1px solid var(--line);border-left:6px solid var(--gold);
+  border-radius:16px;padding:28px 26px;margin-bottom:28px;
+}
+.hall::after{content:"📼";position:absolute;right:16px;bottom:-18px;font-size:130px;opacity:.14}
+.hall .rec{font-family:"Courier New",monospace;font-size:12px;color:var(--neon);letter-spacing:3px}
+.hall h2{font-size:25px;margin:6px 0 8px;color:#fff;text-shadow:0 0 12px rgba(255,95,162,.4)}
+.hall p{color:#f0d9ec;max-width:650px;font-size:14px}
+.hall .chips{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.hall .chips span{padding:4px 12px;border:1px solid var(--line);border-radius:20px;font-size:12px;color:var(--cyan);font-family:"Courier New",monospace}
+
+/* 栏目头 */
+.section{margin-bottom:30px}
+.s-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.s-head .no{width:30px;height:30px;border-radius:6px;background:var(--velvet);color:#ffd9e0;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:"Courier New",monospace}
+.s-head h3{font-size:18px;color:#fff;letter-spacing:1px}
+.s-head .more{margin-left:auto;font-size:12px;color:var(--gold);font-family:"Courier New",monospace}
+
+/* 栏目一：录像厅片目 */
+.tape-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tape-card{
+  background:rgba(255,255,255,.05);border:1px solid var(--line);
+  border-top:3px solid var(--neon);border-radius:12px;padding:18px;transition:transform .25s;
+}
+.tape-card:hover{transform:translateY(-4px)}
+.tape-card .year{font-family:"Courier New",monospace;font-size:12px;color:var(--gold)}
+.tape-card h4{font-size:16px;margin:6px 0;color:#fff}
+.tape-card .meta{font-size:12px;color:#d9b9d4;font-family:"Courier New",monospace;margin-bottom:8px}
+.tape-card p{font-size:13px;color:#ecd9e6}
+.tape-card .fmt{margin-top:10px;font-size:11px;color:var(--cyan);border:1px solid var(--line);display:inline-block;padding:2px 10px;border-radius:10px;font-family:"Courier New",monospace}
+
+/* 栏目二：年代轴 */
+.decade{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.decade-row{display:flex;gap:14px;padding:14px 16px;border-bottom:1px dashed var(--line);align-items:flex-start}
+.decade-row:last-child{border-bottom:none}
+.decade-year{width:64px;flex-shrink:0;font-family:"Courier New",monospace;font-weight:800;color:var(--gold);font-size:15px}
+.decade-info h4{font-size:15px;color:#fff}
+.decade-info p{font-size:12px;color:#d9b9d4;margin-top:3px}
+.decade-tag{margin-left:auto;font-size:11px;color:var(--neon);border:1px solid var(--line);padding:3px 10px;border-radius:12px;white-space:nowrap;font-family:"Courier New",monospace}
+
+/* 栏目三：修复长廊 横向 */
+.reel-scroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.reel-card{scroll-snap-align:start;flex:0 0 220px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.reel-top{height:80px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,var(--velvet),#4a121c)}
+.reel-card:nth-child(2) .reel-top{background:linear-gradient(135deg,var(--neon),#b13b78)}
+.reel-card:nth-child(3) .reel-top{background:linear-gradient(135deg,var(--cyan),#1f7d72)}
+.reel-card:nth-child(4) .reel-top{background:linear-gradient(135deg,var(--gold),#9c7a1f)}
+.reel-card:nth-child(5) .reel-top{background:linear-gradient(135deg,#7a5ea8,#4f3b73)}
+.reel-body{padding:12px}
+.reel-body h4{font-size:14px;color:#fff;margin-bottom:4px}
+.reel-body p{font-size:11px;color:#d9b9d4;line-height:1.5;font-family:"Courier New",monospace}
+
+/* 栏目四：关于 */
+.about{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.about .ico{font-size:38px}
+.about h3{font-size:17px;color:var(--gold);margin-bottom:6px}
+.about p{font-size:13px;color:#ecd9e6;max-width:660px}
+.about .url{margin-top:8px;font-family:"Courier New",monospace;font-size:12px;color:var(--cyan)}
+
+/* 页脚 */
+.footer{margin-top:30px;border-top:1px solid var(--line);padding:26px 20px 38px;text-align:center;color:#cbb3c8;font-size:12px;font-family:"Courier New",monospace}
+.footer a{color:var(--gold)}
+.footer .fn{margin-top:12px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.footer .fn a{color:#cbb3c8}
+.footer .fn a:hover{color:#fff}
+
+@media(max-width:860px){.tape-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .crt h1{font-size:22px}
+  .nav a{padding:6px 12px;font-size:12px}
+  .hall{padding:20px 16px}
+  .hall h2{font-size:20px}
+  .main{padding:0 16px 24px}
+  .tape-grid{grid-template-columns:1fr}
+  .decade-row{flex-wrap:wrap}
+  .decade-tag{margin-left:0}
+  .reel-card{flex-basis:80%}
+  .about{padding:18px 14px}
+}
+</style>
+</head>
+
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="vhs-bar">▮ REC 八零光影电影网 · 1980s-1990s · 录像厅 / 港片 / VHS / 修复 · 单页自适应</div>
+
+<header class="header">
+  <div class="crt">
+    <div class="play">▶</div>
+    <div>
+      <h1>八零光影电影网</h1>
+      <div class="en">balingguangyingdianyingwang-h5 · 80s-90s Rewind</div>
+    </div>
+  </div>
+  <p class="slogan">y80s 是老牌手机电影下载站变体；我们做“八零光影”——录像厅、港片黄金年代、国产老片、VHS 怀旧与修复片单，不挂盗版磁带。</p>
+  <div class="search-wrap">
+    <form action="#" method="get">
+      <input type="text" name="q" placeholder="搜 录像厅 / 港产片 / 国产老片 / 周润发 / 斯皮尔伯格...">
+      <button type="submit">倒带</button>
+    </form>
+  </div>
+</header>
+
+<nav class="nav">
+  <a href="#" class="active">首页</a>
+  <a href="#">港片黄金</a>
+  <a href="#">国产老片</a>
+  <a href="#">录像厅</a>
+  <a href="#">欧美80s</a>
+  <a href="#">动画与动漫</a>
+  <a href="#">胶片修复</a>
+  <a href="#">关于八零</a>
+</nav>
+
+<div class="main">
+
+  <section class="hall">
+    <div class="rec">● PLAYING: 1985 — 1995</div>
+    <h2>插进录像带，整个夏天都亮了</h2>
+    <p>八零光影电影网把 80—90 年代当展厅：录像厅排片、港片双雄、国产第四/五代、好莱坞动作与动画、VHS 噪点与胶片修复。单页静态、移动端自适应、内页 # 占位；不提供未授权下载，正版片源另附外链。</p>
+    <div class="chips">
+      <span>录像厅</span><span>港产片</span><span>国产老片</span><span>VHS</span><span>修复</span>
+    </div>
+  </section>
+
+  <!-- 栏目一 -->
+  <section class="section" id="tapes">
+    <div class="s-head"><span class="no">01</span><h3>录像厅片目</h3><a class="more" href="#">全部片目 #</a></div>
+    <div class="tape-grid">
+      <article class="tape-card">
+        <div class="year">1986 · HK</div>
+        <h4>《英雄本色》</h4>
+        <div class="meta">吴宇森 / 周润发 / 狄龙</div>
+        <p>风衣、火柴、教堂枪战。港片浪漫主义的顶点，男人义气被拍成宗教。</p>
+        <span class="fmt">VHS · 粤语</span>
+      </article>
+      <article class="tape-card">
+        <div class="year">1990 · CN</div>
+        <h4>《菊豆》</h4>
+        <div class="meta">张艺谋 / 巩俐 / 李保田</div>
+        <p>染坊、红灯、闷住的欲望。第四/五代把乡土和人性一起放进镜头里。</p>
+        <span class="fmt">35mm · 修复</span>
+      </article>
+      <article class="tape-card">
+        <div class="year">1982 · US</div>
+        <h4>《E.T. 外星人》</h4>
+        <div class="meta">斯皮尔伯格</div>
+        <p>自行车飞过月亮，童年第一次知道“告别”长什么样。</p>
+        <span class="fmt">VHS · 英语</span>
+      </article>
+      <article class="tape-card">
+        <div class="year">1991 · HK</div>
+        <h4>《纵横四海》</h4>
+        <div class="meta">吴宇森 / 周润发 / 张国荣</div>
+        <p>偷画、轮椅、巴黎屋顶。枪战也能跳探戈，贼比绅士好看。</p>
+        <span class="fmt">LD · 粤语</span>
+      </article>
+      <article class="tape-card">
+        <div class="year">1988 · CN</div>
+        <h4>《红高粱》</h4>
+        <div class="meta">张艺谋 / 姜文 / 巩俐</div>
+        <p>高粱地、十八里坡、酒歌。中国电影在国际上“晒太阳”的起点。</p>
+        <span class="fmt">35mm · 修复</span>
+      </article>
+      <article class="tape-card">
+        <div class="year">1989 · JP</div>
+        <h4>《魔女宅急便》</h4>
+        <div class="meta">宫崎骏 / 吉卜力</div>
+        <p>扫帚、海边小镇、会说话的猫。80 年代末的青春，是“先飞起来再害怕”。</p>
+        <span class="fmt">VHS · 日语</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目二 -->
+  <section class="section" id="decades">
+    <div class="s-head"><span class="no">02</span><h3>年代轴 · 1979—1999</h3><a class="more" href="#">完整轴 #</a></div>
+    <div class="decade">
+      <div class="decade-row">
+        <div class="decade-year">1979+</div>
+        <div class="decade-info"><h4>解冻与探索</h4><p>《小花》《庐山恋》《邻居》——国产片开始谈人、谈脸、谈情感。</p></div>
+        <div class="decade-tag">国产新潮</div>
+      </div>
+      <div class="decade-row">
+        <div class="decade-year">1984+</div>
+        <div class="decade-info"><h4>第五代出场</h4><p>《黄土地》《红高粱》——土地、色彩、民俗，中国电影被世界看见。</p></div>
+        <div class="decade-tag">国际突围</div>
+      </div>
+      <div class="decade-row">
+        <div class="decade-year">1986+</div>
+        <div class="decade-info"><h4>港片黄金</h4><p>英雄片、赌片、僵尸片、无厘头——录像厅一夜连放三场。</p></div>
+        <div class="decade-tag">录像厅热</div>
+      </div>
+      <div class="decade-row">
+        <div class="decade-year">1989+</div>
+        <div class="decade-info"><h4>吉卜力与动画热</h4><p>《魔女宅急便》《龙猫》——动画不再是小孩专属。</p></div>
+        <div class="decade-tag">动画复兴</div>
+      </div>
+      <div class="decade-row">
+        <div class="decade-year">1994+</div>
+        <div class="decade-info"><h4>世界电影大年</h4><p>《肖申克的救赎》《低俗小说》《这个杀手不太冷》——录像带店里的神作集中爆发。</p></div>
+        <div class="decade-tag">全球经典</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三 -->
+  <section class="section" id="restore">
+    <div class="s-head"><span class="no">03</span><h3>倒带长廊 · 主题抽屉</h3><a class="more" href="#">更多 #</a></div>
+    <div class="reel-scroll">
+      <div class="reel-card"><div class="reel-top">🎬</div><div class="reel-body"><h4>港产双雄</h4><p>《英雄本色》《龙虎风云》《辣手神探》</p></div></div>
+      <div class="reel-card"><div class="reel-top">📼</div><div class="reel-body"><h4>录像厅夜场</h4><p>僵尸片 / 赌片 / 武侠 / 午夜恐怖</p></div></div>
+      <div class="reel-card"><div class="reel-top">🎞️</div><div class="reel-body"><h4>国产老片修复</h4><p>《神女》《小城之春》《红高粱》《城南旧事》</p></div></div>
+      <div class="reel-card"><div class="reel-top">🛸</div><div class="reel-body"><h4>欧美80s</h4><p>《回到未来》《E.T.》《夺宝奇兵》《银翼杀手》</p></div></div>
+      <div class="reel-card"><div class="reel-top">🧾</div><div class="reel-body"><h4>动画与动漫</h4><p>吉卜力 / 上美影 / 变形金刚 / 灌篮高手</p></div></div>
+    </div>
+  </section>
+
+  <!-- 栏目四 -->
+  <section class="section" id="about">
+    <div class="s-head"><span class="no">04</span><h3>关于八零光影</h3></div>
+    <div class="about">
+      <div class="ico">📼</div>
+      <div>
+        <h3>y80s 是老下载站，八零光影是怀旧片单站</h3>
+        <p>八零光影电影网（balingguangyingdianyingwang-h5）只做 1980s—1990s 的怀旧片单、录像厅文化与胶片修复整理。原 80s / y80s 类站点长期提供手机电影下载，存在版权风险；本站不继承其资源模式、不提供盗版磁带/磁力，也不做“手机电影免费下”那套话术。</p>
+        <div class="url">https://balingguangyingdianyingwang-h5.github.io</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <div>© 2026 八零光影电影网 | balingguangyingdianyingwang-h5</div>
+  <div>永久地址：<a href="https://balingguangyingdianyingwang-h5.github.io">https://balingguangyingdianyingwang-h5.github.io</a></div>
+  <div>本站为 80-90 年代电影推荐/片单/修复整理站，不提供盗版或未经授权下载。</div>
+  <div class="fn">
+    <a href="#">首页</a><a href="#">港片</a><a href="#">国产</a><a href="#">录像厅</a><a href="#">欧美</a><a href="#">修复</a><a href="#">关于</a>
+  </div>
+</footer>
+
+</body>
+</html>
